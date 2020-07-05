@@ -1,8 +1,8 @@
-# api-POST-GET-symfony5
+
 
 ## this is API for insert and show data from data base
 
-## You should do this:
+### You should do this:
 
 1- installing symfony.
 
@@ -14,7 +14,9 @@
 
 5- Creating the User table with migrations.
 
-## NOW
+### NOW
 Open the postman and type in the url 
+
   for POST ( http://127.0.0.1:8000/api/add) and enter key and value (l_name , f_name , description)
+  
   for GET (http://127.0.0.1:8000/api/list) .
