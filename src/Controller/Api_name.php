@@ -59,17 +59,13 @@ class Api_name extends AbstractController
      * @Route("list", name="list_name", methods={"GET"})
      */
 
-    public function list(NameRepository $NameRepository)
-    {
-        $names = $NameRepository->getAll();
-
-            if(!$names){
-                throw $this->createNotFoundException(
-                'Not found the names.. '
-            );
-        }
-        
-         return $this->json(['name'=>$names]);
+     public function list(NameRepository $NameRepository)
+    {                
+        $names = $this->getDoctrine()
+            ->getRepository(Name::class)
+            ->getAll();
+           
+           return $this->json(['name'=>$names]);
         
      }
  
