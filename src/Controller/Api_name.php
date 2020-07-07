@@ -19,7 +19,7 @@ class Api_name extends AbstractController
 
     /**
      * 
-     * @Route("add", name="api_add_name", methods={"POST"})
+     * @Route("name", name="api_add_name", methods={"POST"})
      */
     public function add(Request $request)
     {
@@ -56,7 +56,7 @@ class Api_name extends AbstractController
         
     }
     /**
-     * @Route("list", name="list_name", methods={"GET"})
+     * @Route("name", name="list_name", methods={"GET"})
      */
 
      public function list(NameRepository $NameRepository)
