@@ -17,6 +17,7 @@
 ### NOW
 Open the postman and type in the url 
 
-  for POST ( http://127.0.0.1:8000/api/add) and enter key and value (l_name , f_name , description)
+   ( http://127.0.0.1:8000/api/name) 
+   for POST enter key and value (l_name , f_name , description)
   
-  for GET (http://127.0.0.1:8000/api/list) .
+  
