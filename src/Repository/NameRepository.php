@@ -50,13 +50,13 @@ class NameRepository extends ServiceEntityRepository
 
     public function getAll(): array
 {
-    $conn = $this->getEntityManager()->getConnection();
+        $entityManager = $this->getEntityManager();
 
-    $sql = 'SELECT * FROM name';
-    $query = $conn->prepare($sql);
-    $query->execute();
+        $query = $entityManager->createQuery(
+            'SELECT n FROM App\Entity\Name n'
+        );
 
-    // returns an array of arrays 
-    return $query->fetchAll();
+        // returns an array of Name objects
+        return $query->getResult();
 }
 }
